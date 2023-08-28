@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fruits</title>
+
+	<style type="text/css">
+		
+		body {
+			background-color: blueviolet;
+		}
+
+		h1 {
+			text-align: center;
+		}
+		#fruit-top {
+			display: flex;
+			justify-content: space-evenly;
+			border-radius: 15px;
+		}
+
+		#fruit-name {
+			width: 300px;
+			height: 55px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<h1>Fruits list for shopping</h1>
+	<main>     
+	 <header id="fruit-top">
+
+     	<input id="fruit-name" placeholder="Enter any fruit">
+
+     	<button onclick="addFruit()">Add fruit</button>
+
+     </header>
+     </main>
+
+     <section id="enter-fruits">
+     	<ul id="list-of-fruits">
+     	</ul>
+     </section>
+
+     <script type="text/javascript">
+     	
+     	function addFruit()
+
+     	{
+
+     		let fruit_name = document.getElementById("fruit-name").value
+
+     		let unordered_list = document.getElementById("list-of-fruits")
+
+     		let element_list = document.createElement("li")
+
+     		element_list.innerText = fruit_name
+
+     		unordered_list.appendChild(element_list)
+
+     	}
+     </script>
+
+</body>
+</html>
